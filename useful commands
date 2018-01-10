@@ -1,0 +1,21 @@
+#Path services
+/etc/systemd/system 
+
+#Reloaded all daemons
+systemctl daemon-reload
+
+#Enable service to autostart
+systemctl enable myFancy.service
+
+#Start service
+systemctl start name.service
+
+
+#Monitoring status and control it
+systemctl status myFancy.service
+systemctl stop myFancy.service
+systemctl start myFancy.service
+systemctl disable myFancy.service
+
+#All service
+systemctl list-unit-files | grep enabled

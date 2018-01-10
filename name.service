@@ -1,0 +1,12 @@
+#put this file into /etc/systemd/system
+[Unit]
+Description=description
+
+[Service]
+Type=oneshot
+//type=simple
+ExecStart=/bin/bash /home/nataraja/Scrivania/script.sh
+//Restart=on-abort,on-failure,always(this require that script return 0)
+
+[Install]
+WantedBy=multi-user.target
